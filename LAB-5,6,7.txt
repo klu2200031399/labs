@@ -1,0 +1,26 @@
+LAB:5 Demonstration on AWS Lamda
+
+author name : lamdajan10
+
+runtime : python 3.13
+
+eventname - myevent
+
+
+LAB:6 Demonstration on AWS Dynamo-DB(NO-SQL DB)-NOT only SQL(Non relational database)
+
+go to dynamo db -> create table
+table name: employee
+partition key -> empid -number  (it is the key)
+
+
+LAB:7 Demonstration on EC2 instance to copy the file to S3 bucket.   IAM(Identity Access Management)
+
+step1: create an IAM role with and S3 bucket Operations.
+step2: Create S3 bucket
+step3: Create EC2 instance either LINUX or UBUNTU AMI then
+       1) create new file(demo.txt)
+       2) cpoy/move demo.txt from EC2 instance to S3 bucket using command.
+
+ROOT means admin or simply AWS Account Holder.
+IAM user means user created by root user , IAM means identity Access Management.

@@ -1,0 +1,45 @@
+LAB -7:
+ we create an IAM role with EC2+S3 Full Access(done in jan 10)
+ we created S3 bucket(done in jan 10)
+ EC2 Instance creation.
+ 
+go to ec2:
+
+1.launch instance 
+2.name - ec2serverjan24
+3. create a new keypair - name - keypairjan24
+
+commands
+
+
+
+
+
+
+LAB - 8:Demo on Lambda Function to create S3 Bucket
+
+1.Create IAM Role with Lambda & S3 full Access
+2.Create Lambda Function
+3.Test the Lambda Function with python code to create S3 Bucket dynamically.
+
+ python code:
+import logging
+import boto3
+from botocore.exceptions import ClientError
+
+def lambda_handler(event, context):
+    bucket_name = event['bucket_name']
+    region = event['region']
+
+    try:
+        s3_client = boto3.client('s3', region_name=region)
+        location = {'LocationConstraint': region}
+
+        s3_client.create_bucket(Bucket=bucket_name, CreateBucketConfiguration=location)
+        print(f"Bucket '{bucket_name}' successfully created in region '{region}'.")
+        return True
+
+    except ClientError as e:
+        logging.error(e)
+        print(f"Failed to create bucket '{bucket_name}' in region '{region}': {e}")
+        return False

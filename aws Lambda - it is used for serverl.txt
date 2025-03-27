@@ -1,0 +1,8 @@
+aws Lambda - it is used for serverless computing to run code in response events, not specifically for managing containerized application at scale.
+amazon RDS - a managed relational database service that simplifies setting up, operating, and scaling a relational database in the cloud.
+aws elastic beanstalk -
+amazon ECS - specifically designed to help you automate the deployment, scaling and operations.
+amazon CloudFront -
+amazon ECS with Faregate - it is used to deploy and manage containerized application. at scale without managing the underlying infrastructure.
+
+ 

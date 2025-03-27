@@ -1,0 +1,16 @@
+Lab-4:Demonstration on RDS(Relational data service) Service to create MYSQL Database.
+  
+1.Go to console open RDS                  --->(Region Ohio)
+2.go to databases and click create database.
+3,with name "dbinstance".
+4. username - root 
+   password - Klef1234
+   port -3306
+5.rds-sg-jan9       vpc -virtual private cloud
+6. databasename : awsda
+
+endpoint : dbinstance.c5ae4cicab2i.us-east-2.rds.amazonaws.com
+ username - root 
+   password - Klef1234
+   port -3306
+
